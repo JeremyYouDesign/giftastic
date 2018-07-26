@@ -1,0 +1,21 @@
+#header {
+    color: whitesmoke;
+    width: stretch;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+#button-div {
+    margin: 25px;
+}
+
+.gif-btn {
+    margin: 5px;
+}
+
+.item {
+    margin: 10px;
+    float: left;
+}
