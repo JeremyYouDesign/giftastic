@@ -11,11 +11,15 @@ function displayGif() {
         method: "GET"
     }).then(function(response) {
         var results = response.data;
-    
+
         for (var i = 0; i < results.length; i++) {
             var gifDiv = $("<div class='item'>");
+            var title = results[i].title;
             var rating = results[i].rating;
-            var p = $("<p>").text("Rating: " + rating);
+
+            var p1 = $("<p>").text("Title: " + title);
+            var p2 = $("<p>").text("Rating: " + rating);
+
             var image = $("<img>");
             image.addClass("gif");
             image.attr({
@@ -25,7 +29,8 @@ function displayGif() {
             });
                 
             gifDiv.append(image.attr("src", image.attr("stillURL")));
-            gifDiv.append(p);
+            (gifDiv).append(p1);
+            (gifDiv).append(p2);
     
             $("#gif-div").prepend(gifDiv);
         }
